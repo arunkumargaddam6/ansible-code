@@ -8,7 +8,7 @@ read -p "enter the file name:" file1
 echo $file1
 test -f $file1
 #[ -f $file1 ]
-if [ $? != 0 ]
+if [ $? = 0 ]
 then
     echo "file does not exist and file can be created"
     touch $file1

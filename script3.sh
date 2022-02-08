@@ -2,7 +2,7 @@ read -p "enter the directory name:" directory1
 echo $directory1
 #test -d $directory1
 [ -d $directory1 ]
-if [ $? != o ]
+if [ $?! = o ]
 then 
     echo "directory is not exist and can be created"
     mkdir $directory1
