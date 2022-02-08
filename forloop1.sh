@@ -1,6 +1,6 @@
 #!/bin/bash
 v_ipaddress='10.0.1.1 10.0.1.2 10.0.1.3 10.0.1.4'
-#v_ipaddress = 'cat ip.txt' (if we have a file with ip addresses)
+#v_ipaddress = `cat ip.txt`(if we have a file with ip addresses)
 for i in $v_ipaddress
 do
     echo $i
