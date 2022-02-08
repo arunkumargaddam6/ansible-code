@@ -1,6 +1,6 @@
 ---
 - name: My first playbook
-  hosts: locahost
+  hosts: localhost
   vars:
     user: charan
     password: charan123
