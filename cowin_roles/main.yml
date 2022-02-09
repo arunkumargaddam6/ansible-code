@@ -1,6 +1,6 @@
 ---
 - name: cowin playbook
-  hosts: local hosts
+  hosts: localhost
   vars_files:
   - var.yml
   tasks:
