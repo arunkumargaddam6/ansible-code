@@ -16,7 +16,7 @@
     method: GET
     status_code: 200 
   register: specific_state_details
-  tag: state_specific
+  tags: state_specific
 - name: printing specific_state list
   debug: 
     msg: '{{ specific_state_details }}'
