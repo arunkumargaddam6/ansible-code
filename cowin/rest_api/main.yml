@@ -1,0 +1,20 @@
+---
+- name: rest_api playbook
+  hosts: localhost
+  tasks: 
+  - include_role:
+      name: get_employee
+    tags: 
+    - get_info 
+  - include_role:
+      name: create_employee
+    tags:
+    - newrecord
+  - include_role:
+      name: update_employee
+    tags: 
+    - update_employee_record
+  - include_role:
+      name: delete_employees
+    tags:
+    - delete_info

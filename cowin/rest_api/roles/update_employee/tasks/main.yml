@@ -1,0 +1,17 @@
+---
+- name: update employee record
+  uri:
+    url: http://dummy.restapiexample.com/api/v1/update/3
+    method: PUT
+    body: {"employee_name": "Ashton Cox",
+           "employee_salary": "30000",
+           "employee_age": "33"
+           }
+    status_code: 200
+    return_content: yes
+    header_content_type: application/json
+  register: updated_record
+  tags: update_employee_record 
+- debug:
+      msg: "{{ updated_record }}"
+

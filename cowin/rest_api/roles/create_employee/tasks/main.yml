@@ -1,0 +1,17 @@
+---
+- name: creating new employee record
+  uri:
+    url: http://dummy.restapiexample.com/api/v1/create
+    validate_certs: no
+    method: "POST"
+    body_format: json
+    body:
+       {
+        "name": "{{Name}}",
+        "age": "{{age}}",
+        "salary": "{{salary}}"
+       }
+  register: crete_new_record
+  tags: newrecord
+- debug:
+    msg: "{{crete_new_record}}"
