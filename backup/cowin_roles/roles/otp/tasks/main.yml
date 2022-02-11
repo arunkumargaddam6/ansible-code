@@ -13,4 +13,3 @@
   tags: generate_otp
 - debug:
     msg: "{{OTP_details}}"
-  tags: generate_otp

@@ -7,7 +7,7 @@
     body_format: json
     body:
        {
-        "name": "{{name}}",
+        "name": "{{Name}}",
         "age": "{{age}}",
         "salary": "{{salary}}"
        }
@@ -15,4 +15,3 @@
   tags: newrecord
 - debug:
     msg: "{{crete_new_record}}"
-  tags: newrecord

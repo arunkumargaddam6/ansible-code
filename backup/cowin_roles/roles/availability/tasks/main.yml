@@ -1,7 +1,7 @@
 ---
 - name: getting availability list
   uri:
-    url: 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode={{ pincode }}&date={{ date }}'
+    url: https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode= {{ pincode }}&date={{ date }}
     method: GET
     status_code: 200 
   register: availability_details

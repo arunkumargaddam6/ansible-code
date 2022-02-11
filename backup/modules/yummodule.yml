@@ -6,8 +6,8 @@
   tasks:
   - name: Install the latest version of Apache
     yum:
-      name: git
-    register: response
+      name: firwalld
+    register: apache
   - name: printing output of package installatin tasks  
     debug:
-      msg: '{{response}}'
+      msg: '{{apache}}'

@@ -9,4 +9,4 @@
 - name: printing employee information 
   debug:
     msg: '{{ all_employees_info }}'
-  tags: get_info
+  tags: get_info 

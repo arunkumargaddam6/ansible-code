@@ -17,6 +17,6 @@
     tags: 
     - update_employee_record
   - include_role:
-      name: delete_employee
+      name: delete_employees
     tags:
     - delete_info

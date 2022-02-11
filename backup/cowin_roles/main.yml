@@ -7,7 +7,7 @@
   - include_role:
       name: availability
     tags:
-    - availability
+    - availability_details
   - include_role:
       name: otp
     tags:

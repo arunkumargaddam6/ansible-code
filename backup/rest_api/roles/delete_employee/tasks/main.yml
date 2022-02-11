@@ -1,7 +1,7 @@
 ---
 - name: delet employee record
   uri:
-    url: http://dummy.restapiexample.com/api/v1/delete/{{id}}
+    url: http://dummy.restapiexample.com/api/v1/delete/6
     method: DELETE
     status_code: 200
   register: delete_employees_info
@@ -9,4 +9,4 @@
 - name: printing deleted information 
   debug:
     msg: '{{ delete_employees_info }}'
-  tags: delete_info
+  

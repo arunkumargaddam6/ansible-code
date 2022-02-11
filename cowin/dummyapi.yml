@@ -1,13 +1,15 @@
 ---
 - name: Dummy APIs
   hosts: localhost
+  vars:
+    pagenumber: 2
   tasks:
-- name: pulling all employees information
-  uri:
-    url: https://reqres.in/api/users?page=2
-    method: GET
-    status_code: 200
-  register: employee_information
-- name: printing employee information 
-  debug:
-    msg: '{{ employee_information }}'
+  - name: pulling all employees information
+    uri:
+      url: https://reqres.in/api/users?page={{pagenumber}}
+      method: GET
+      status_code: 200
+    register: employee_information
+  - name: printing employee information 
+    debug:
+      msg: '{{ employee_information }}'
