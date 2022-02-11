@@ -3,9 +3,9 @@
   uri:
     url: http://dummy.restapiexample.com/api/v1/update/3
     method: PUT
-    body: {"employee_name": "Ashton Cox",
-           "employee_salary": "30000",
-           "employee_age": "33"
+    body: {"employee_name": "{{employee_name}}",
+           "employee_salary": "{{ employee_salary }}",
+           "employee_age": "{{ employee_age }}"
            }
     status_code: 200
     return_content: yes

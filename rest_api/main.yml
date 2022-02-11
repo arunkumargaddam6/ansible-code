@@ -1,6 +1,8 @@
 ---
 - name: rest_api playbook
   hosts: localhost
+  vars_files:
+  - var.yml
   tasks: 
   - include_role:
       name: get_employee
