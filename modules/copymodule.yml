@@ -1,16 +1,14 @@
 ---
 - name: copy module
   hosts: localhost
+  become: yes
   tasks:
   - name: copy file with owner and persmissions
-    ansible.builtin.servce:
-      src:
-      dest:
-      owner:
-      group:
-      mode:
+    copy:
+      src: /home/ec2-user/ansible-code/user.txt
+      dest: /home/ec2-user/ansible-code/cowin/user.txt
     register: copied_file
-  - name: printing destination copied file
+  - name: printing the output of destination file 
     debug:
       msg: "{{ copied_file }}"
 

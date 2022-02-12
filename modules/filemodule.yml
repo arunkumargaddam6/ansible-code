@@ -1,0 +1,36 @@
+---
+- name: file module
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: changing permission to script1.sh
+    file:
+      path: /home/ec2-user/ansible-code/script1.sh
+      mode: '777'
+    register: output
+    tags: first
+  - name: printing output
+    debug:
+      msg: "{{ output }}"
+    tags: first
+  - name: changing permission to script3.sh
+    file:
+      path: /home/ec2-user/ansible-code/script3.sh
+      mode: '777'
+    register: second_output
+    tags: second
+  - name: printing second output
+    debug:
+      msg: "{{ second_output }}"
+    tags: second
+  - name: touch a file if not existed
+    file:
+      path: /home/ec2-user/ansible-code/modules/directorymodule.yml
+      state: touch
+      mode: '777'
+    register: third_output
+    tags: third
+  - name: printing third output
+    debug:
+      msg: "{{ third_output }}"
+    tags: third

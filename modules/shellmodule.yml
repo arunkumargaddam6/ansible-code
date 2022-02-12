@@ -1,0 +1,13 @@
+---
+- name: commond module
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: checking what is inside the directory
+    shell:
+      cmd: ls 
+      chdir: /home/ec2-user
+    register: output
+  - name: printing output
+    debug:
+      msg: "{{ output }}"
