@@ -18,7 +18,7 @@ then
         echo "file created successfully"
     else
         echo "file not created" 
-fi           
+    fi           
 else
     echo "file exist ending the script"
     exit 0

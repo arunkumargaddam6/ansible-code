@@ -34,3 +34,24 @@
     debug:
       msg: "{{ third_output }}"
     tags: third
+  - name: create a directory
+    file:
+      path: /home/ec2-user/ansible-code/newdirectory
+      state: directory
+      mode: '0755'
+    register: fourth_output
+    tags: fourth
+  - name: printing the fourth_output
+    debug:
+      msg: "{{ fourth_output }}"
+    tags: fourth
+  - name: delete the new the directory
+    file:
+      path: /home/ec2-user/ansible-code/newdirectory
+      state: absent
+    register: fifth_output
+    tags: fifth
+  - name: printing the fifth_output
+    debug:
+      msg: "{{ fifth_output }}"
+    tags: fifth
