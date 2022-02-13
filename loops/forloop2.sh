@@ -7,7 +7,7 @@ do
     if [ $? == 0 ]
     then
         echo "user exist in the file, so end the script"
-        exit 0
+        # exit 0
     else
         echo "user does not exist so creat the user"
         sudo useradd $i
