@@ -10,7 +10,7 @@ do
         exit 0
     else
         echo "user does not exist so creat the user"
-         useradd $i
+        sudo useradd $i
         if [ $? == 0 ]
         then
             echo "user has been added successfully"
