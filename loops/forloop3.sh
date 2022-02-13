@@ -1,13 +1,13 @@
-#!usr/bin/binbash
+#!/bin/bash
 V_id=`cat user.txt`
 for i in V_id
 do
     echo $i
-    sudo id $i 1>dev>null 2>dev>null
+    id $i 1>dev>null 2>dev>null
     if [ $? == 0 ]
     then
         echo "user exist in the file so delete"
-        sodo userdel $i
+        sudo userdel $i
         if [ $? == 0 ]
         then
             echo "user deleted successfully"
@@ -16,6 +16,6 @@ do
         fi
     else
         echo "user does not exist so can not be deleted"
-        exit 0
+        #exit 0
     fi
 done
