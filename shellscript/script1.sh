@@ -1,5 +1,5 @@
 ## create a user and verify whether it got created successfully or not
-#!bin/bash
+#!/bin/bash
 read -p "Enter the username:" username
 echo  $username
 id $username 1>/dev/null 2>/dev/null

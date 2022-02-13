@@ -1,3 +1,4 @@
+#!/bin/bash
 read -p "enter the directory name:" directory1
 echo $directory1
 #test -d $directory1

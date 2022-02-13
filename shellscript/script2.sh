@@ -1,3 +1,4 @@
+#!/bin/bash
 ##create file for user
 #validate whether the user is exist or not
 #if file exist end the script with the notification that the file already exist
