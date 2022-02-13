@@ -10,7 +10,7 @@ then
 
  else 
      echo "user not exist, can be created"
-     adduser $username
+     sudo adduser $username
      echo "user successfully created"
     
   fi       
