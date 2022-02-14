@@ -1,0 +1,11 @@
+idli
+dosa
+vada
+upma
+pesarattu
+tea
+coffee
+softdrinks
+vodka
+beer
+rum
