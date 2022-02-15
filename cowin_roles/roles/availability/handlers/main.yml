@@ -1,0 +1,10 @@
+---
+- name: Restart memcached
+  ansible.builtin.service:
+      name: memcached
+      state: restarted
+
+- name: Restart apache
+  ansible.builtin.service:
+      name: apache
+      state: restarted

@@ -3,9 +3,39 @@
   hosts: localhost    
   vars:
      name: ['arun','rishi','sindhu','radha']
+     lastname: ['gaddam','some','aleti','chinna']
+     package: ['git', 'redis']
+     condition: True
+     version: ['1.0','2.0']
   tasks:
+  - name: installing package 
+    block:
+    - name: installing a package
+      yum:
+        name: "{{item.0}}"
+        version: "{{item.1}}"
+      with_together:
+      - "{{package}}"
+      - "{{version}}"
+    rescue:
+    - name: printing error response
+      debug:
+        msg: "got an error while installing package so please follow the log"
+    # - name: ending play
+    #   meta: end_play    
+  # - name: installing a package
+  #   yum:
+  #     name: "{{item}}"
+  #   with_items:
+  #   - "{{package}}"
+  #   ignore_errors: True
   - name: printing name
     debug:
-      msg: "{{item}}"
-    with_items:
+      msg: "{{item.0}} {{item.1}}" 
+    with_together:
     - "{{name}}"
+    - "{{lastname}}"
+    when: condition== True
+    
+    
+    #failed_when homework
