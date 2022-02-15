@@ -1,5 +1,5 @@
 ---
-- name: commond module
+- name: shell module
   hosts: localhost
   become: yes
   tasks:

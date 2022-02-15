@@ -1,0 +1,11 @@
+---
+- name: list playbooks
+  hosts: localhost    
+  vars:
+     name: ['arun','rishi','sindhu','radha']
+  tasks:
+  - name: printing name
+    debug:
+      msg: "{{item}}"
+    with_items:
+    - "{{name}}"

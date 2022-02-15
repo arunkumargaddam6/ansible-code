@@ -3,10 +3,10 @@ read -p "enter username: " username
 echo $username
 read -p "enter age: " age
 echo $age
-a="$age"
-while [ "$a" -lt 10 ]
+# a="$age"
+while [ $age -lt 10 ]
 do
-    b="$a"
+    b="$age"
     while [ "$b" -ge 10 ]
     do
         echo "older than me"
