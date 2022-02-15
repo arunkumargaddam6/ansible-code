@@ -1,3 +1,4 @@
+#!/bin/bash
 myfunc(){
 
 echo "hell mr. $1 and $2"

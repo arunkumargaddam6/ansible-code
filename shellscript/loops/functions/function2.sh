@@ -1,3 +1,4 @@
+#!/bin/bash
 myfunc() {
 
 	read -p "enter username:" username
