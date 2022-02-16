@@ -23,11 +23,11 @@
     method: GET
     status_code: 200 
   register: specific_state_details
-  when: state_details.status == 401
-  tags: state_list 
+  # when: state_details.status == 200
+  tags: state_specific 
 - name: printing specific_state list
   debug: 
     msg: '{{ specific_state_details }}'
-  tags: state_list 
-  when: state_details.status == 401
+  tags: state_specific 
+  # when: state_details.status == 200
   # failed_when: state_details.status == 401
