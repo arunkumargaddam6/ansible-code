@@ -1,0 +1,38 @@
+---
+- name: listing playbook2
+  hosts: localhost
+  vars:
+     a: ['a1','a2','a3','a4']
+     b: ['b1','b2','b3','b4']
+     c: ['c1','c2','c3','c4']
+     condition: True
+  tasks:
+  - name: printing a list
+    block:
+    - name: printing a list
+      debug:
+        msg: " {{item.0}} {{item.1}}"
+      with_together:
+      - "{{a}}" 
+      - "{{c}}"
+    rescue:
+    - name: printing error message
+      debug:
+        msg: "error message" 
+  - name: printing b list
+    block:
+    - name: printing b list
+      debug:
+        msg: "{{item}}"
+      with_items:
+      - "{{b}}"      
+    rescue:
+    - name: printing another error message
+      debug:
+        msg: "error message 2" 
+    when: condition == False     
+       
+
+      
+
+
