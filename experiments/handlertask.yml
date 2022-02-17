@@ -16,5 +16,10 @@
       path: /home/ec2-user/ansible-code/test1.yml
       state: touch
       mode: '777'
+  # - name: make sure handlers are flushed immediately
+  #   meta: flush_handlers
+    
+  #   to run handlers straight away
   
  
+  # use --force-handlers along with yml file when execute to run handlers though playbook fail to execute all the tasks
