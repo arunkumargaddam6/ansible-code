@@ -9,13 +9,20 @@
       dest: /home/ec2-user/ansible-code/experiments/my.sh
     register: copied
     notify:
-      - create a file 
+      - create a file
+      - create a file2 
   handlers:
   - name: create a file
     file:
       path: /home/ec2-user/ansible-code/test1.yml
       state: touch
       mode: '777'
+    register: file_created
+  - name: create a file2
+    file:
+      path: /home/ec2-user/ansible-code/test2.yml
+      state: touch
+    register: file2_created
   # - name: make sure handlers are flushed immediately
   #   meta: flush_handlers
     
