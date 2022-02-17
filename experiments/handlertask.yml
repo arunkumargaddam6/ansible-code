@@ -1,0 +1,20 @@
+---
+- name: playbook3
+  hosts: localhost
+  become: yes
+  tasks: 
+  - name: copymodule1
+    copy:
+      src: /home/ec2-user/ansible-code/my.sh
+      dest: /home/ec2-user/ansible-code/experiments/my.sh
+    register: copied
+    notify:
+      - create a file 
+  handlers:
+  - name: create a file
+    file:
+      path: /home/ec2-user/ansible-code/test1.yml
+      state: touch
+      mode: '777'
+  
+ 
