@@ -5,7 +5,7 @@ echo "first item: ${myitem[0]}"
 
 echo "${#myitem[@]}"
 
-for ( n=o; n<=${#myitem[@]}; n++ )
+for (n=o; n<=${#myitem[@]}; n++)
 do
  echo "${#myitem[$n]}"
 done
