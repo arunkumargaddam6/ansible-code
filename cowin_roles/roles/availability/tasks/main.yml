@@ -9,4 +9,7 @@
 - name: printing availability_details
   debug: 
     msg: '{{ availability_details }}'
-  tags: availability 
+  tags: availability
+  notify:
+    - Restart memcached
+    - Restart apache 
