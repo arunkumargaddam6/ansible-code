@@ -12,10 +12,10 @@ declare command
 arrays
 functions
 files and directories
-sending email via scripting
+sending email via scripting (sudo yum install ssmtp)
 curl in scripts
 prifessinal menus
-wait for filesystem events with inotify
+wait for filesystem events with inotify (sudo yum install inotify.tools)
 introduction to grep
 introduction to awk
 introduction to sed
