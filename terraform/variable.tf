@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "AWS current region"
-  default     = "us-east-1"
+  default     = "ap-southeast-2"
 }
 
 variable "key_path" {
@@ -11,12 +11,12 @@ variable "key_path" {
 
 variable "region" {
   description = "AWS region for hosting our your network"
-  default     = "us-east-1"
+  default     = "ap-southeast-2"
 }
 
 variable "key_name" {
   description = "Key name for SSHing into EC2"
-  default     = "anand-training"
+  default     = "arun-training"
 }
 
 variable "vpc_cidr" {
@@ -37,7 +37,7 @@ variable "private_subnet_cidr" {
 variable "amis" {
   description = "Base AMI to launch the instances"
   default = {
-    us-east-1 = "ami-033b95fb8079dc481"
+    ap-southeast-2 = "ami-0a4e637babb7b0a86"
   }
 }
 variable "bootstrap_path" {
