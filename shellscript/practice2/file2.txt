@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "please provide the number"
+read value
+if [ $value -le 10 ]
+then
+    echo "you provided $value"
+    rm -rf /home/ec2-user/ansible-code/shellscript/practice2/temp/test{1..100}.txt
+    echo "script completed successfully"
+fi
