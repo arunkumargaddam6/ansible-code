@@ -1,0 +1,7 @@
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_default_vpc.test.id
+
+  tags = {
+    Name = "rishi-gw"
+  }
+}
