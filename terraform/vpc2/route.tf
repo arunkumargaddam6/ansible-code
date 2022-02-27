@@ -7,6 +7,6 @@ resource "aws_default_route_table" "example" {
   }
 }
 resource "aws_main_route_table_association" "a" {
-  subnet_id         = "${aws_subnet.example.id}"
+  subnet_id         = "${aws_default_subnet.r_az1.id}"
   route_table_id = "${aws_default_route_table.example.id}"
 }
