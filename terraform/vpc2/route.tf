@@ -1,5 +1,5 @@
 resource "aws_default_route_table" "example" {
-  vpc_id = "${aws_default_vpc.test.id}"
+  vpc_id = "${aws_vpc.test.id}"
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -7,6 +7,6 @@ resource "aws_default_route_table" "example" {
   }
 }
 resource "aws_main_route_table_association" "a" {
-  subnet_id         = "${aws_default_subnet.r_az1.id}"
-  route_table_id = "${aws_default_route_table.example.id}"
+  subnet_id         = "${aws_subnet.r_az1.id}"
+  route_table_id = "${aws_route_table.example.id}"
 }

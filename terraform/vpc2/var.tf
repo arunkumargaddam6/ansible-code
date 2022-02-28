@@ -5,7 +5,7 @@ variable "key_name" {
   
 variable "key_path" {
   description = "Key path for SSHing into EC2"
-  default     = "/mnt/c/Users/ap/Downloads/"
+  default     = "G:\training"
 }
 
 variable "vpc_cidr" {
@@ -21,6 +21,11 @@ variable "public_subnet_cidr" {
 variable "private_subnet_cidr" {
   description = "CIDR for private subnet"
   default     = "10.0.2.0/24"
+}
+
+variable "aws_region" {
+  description = "AWS current region"
+  default     = "ap-southeast-2"
 }
 
 variable "region" {

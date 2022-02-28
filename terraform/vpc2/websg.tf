@@ -1,7 +1,7 @@
 resource "aws_security_group" "web" {
   description = "controls access to the application "
 
-  vpc_id = "${aws_default_vpc.test.id}"
+  vpc_id = "${aws_vpc.test.id}"
   name   = "demo-ELB"
 
   ingress {
