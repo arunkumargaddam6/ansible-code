@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "key_path" {
   description = "Key path for SSHing into EC2"
-  default     = "/mnt/c/Users/ap/Downloads/"
+  default     = "G:\training"
 }
 
 
