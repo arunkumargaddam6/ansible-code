@@ -1,8 +1,8 @@
 resource "aws_route_table" "public-subnet-in-us-east" {
-  vpc_id = "${aws_vpc.default.id}"
+  vpc_id = "${var.vpc_id34}"
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.default.id}"
+    gateway_id = "${var.gateway_id34}"
   }
 }
 resource "aws_route_table_association" "public-subnet-in-us-east-association" {

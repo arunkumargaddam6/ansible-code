@@ -5,6 +5,6 @@ resource "aws_vpc" "default" {
     Name = "anand-vpc"
   }
 }
-output "vpc_id" {
+output "vpc_id22" {
   vlaue = "${aws_vpc.default.id}"
 }

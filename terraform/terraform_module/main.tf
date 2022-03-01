@@ -14,6 +14,6 @@ module "vpc" {
   }
 module "alb" {
   source = ".//modules/alb"
-  vpc_id = "${module.vpc.vpc_id}"
+  vpc_id = "${module.vpc.vpc_id22}"
   subnet_id = "${module.vpc.subnet}"
   }
