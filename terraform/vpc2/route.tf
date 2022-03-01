@@ -1,4 +1,4 @@
-resource "aws_default_route_table" "example" {
+resource "aws_route_table" "public-subnet-in-us-east" {
   vpc_id = "${aws_vpc.test.id}"
 
   route {
@@ -6,7 +6,7 @@ resource "aws_default_route_table" "example" {
     gateway_id = "${aws_internet_gateway.gw.id}"
   }
 }
-resource "aws_main_route_table_association" "a" {
-  subnet_id         = "${aws_subnet.r_az1.id}"
-  route_table_id = "${aws_route_table.example.id}"
+resource "aws_main_route_table_association" "public-subnet-in-us-east-association" {
+  subnet_id         = "${aws_subnet.public-subnet-in-us-east.id}"
+  route_table_id = "${aws_route_table.public-subnet-in-us-east.id}"
 }

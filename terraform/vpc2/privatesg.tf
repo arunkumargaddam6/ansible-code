@@ -72,7 +72,7 @@ resource "aws_security_group" "private" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  vpc_id = "${aws_default_vpc.test.id}"
+  vpc_id = "${aws_vpc.test.id}"
 
   tags = {
     Name = "rishiSG"
