@@ -1,5 +1,5 @@
 resource "aws_internet_gateway" "default" {
-  vpc_id = "${var.vpc_id34}"
+  vpc_id = "${var.vpc_id}"
 
   tags = {
     Name = "anand-gw"
