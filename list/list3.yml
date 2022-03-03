@@ -1,0 +1,26 @@
+---
+- name: playbook
+  hosts: localhost
+  vars:
+    a: ['coffee','tea','vada','dosa']
+    b: ['morning','afternoon','evng','night']
+    condition: False
+  tasks:
+  - name: printing list together
+    block:
+    - name: printing list together
+      debug:
+        msg: "{{item.0}} {{item"
+      with_together:
+      - "{{a}}"
+      - "{{b}}"
+      failed_when: condition == False
+    rescue:
+    - name: printing error msg
+      debug:
+        msg: "something wrong"
+  - name: printing the list
+    debug:
+      msg: "{{item}}"
+    with_items:
+    - "{{a}}"
