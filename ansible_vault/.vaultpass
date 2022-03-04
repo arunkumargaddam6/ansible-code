@@ -1,0 +1,2 @@
+arun
+echo -n 'admin' | ansible-vault 'encrypt_string' --vault-id dev@././.vaultpass --stdin-name 'password'

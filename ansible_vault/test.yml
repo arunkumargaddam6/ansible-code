@@ -1,0 +1,14 @@
+---
+- name: playbook
+  hosts: localhost
+  vars_files:
+  - var.yml
+  tasks:
+  - name: printing password
+    debug:
+      var: password
+
+      
+      
+      
+
