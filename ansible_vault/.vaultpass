@@ -1,2 +1,6 @@
+#for encryption
 arun
 echo -n 'admin' | ansible-vault 'encrypt_string' --vault-id dev@././.vaultpass --stdin-name 'password'
+
+#for decryption
+ansible-playbook --vault-id dev@./.vaultpass test.yml
