@@ -1,4 +1,5 @@
 #!/bin/bash
+# checking the file size and rotate the file name if the file size exceeds 100
 echo "enter the file name"
 read logfile
 maxsize='100'
