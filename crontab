@@ -1,0 +1,1 @@
+*/m * * * * ansible-code/practice/log1.sh >> ansible-code/output.txt

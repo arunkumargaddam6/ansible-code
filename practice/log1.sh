@@ -8,7 +8,7 @@ then
     echo "waring: cpu size is ezceeded and urgent action required"
 elif [ $cpu_size -ge $moderrate_size ]
 then
-    echo "warning: cpu size is moderate so please do watch out"
+    echo "warning: cpu size is moderate at $(date +%m/%d/%y-%H:%M)"
 else
     echo "cpu size is normal"
 fi
